@@ -41,8 +41,10 @@ public class Student_DAO_Imp  implements Student_DAO{
 	public boolean deleteStudent(Student student) {
 		boolean status=false;
 		try {
-			sessionFactory.getCurrentSession().delete(student);
-			status=true;
+			if(getStudentByID(student).size() > 0){
+				sessionFactory.getCurrentSession().delete(student);
+				status=true;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
