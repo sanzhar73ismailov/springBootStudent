@@ -62,7 +62,7 @@ public class Controller {
 		
 	}
 	
-	@PostMapping("update-student/{student_id}")
+	@PutMapping("update-student/{student_id}")
 	public boolean updateStudent(@RequestBody Student student,@PathVariable("student_id") int student_id) {
 		student.setStudent_id(student_id);
 		return studentservice.updateStudent(student);
