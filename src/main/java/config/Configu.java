@@ -22,7 +22,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableTransactionManagement
 @EnableAutoConfiguration(exclude = {HibernateJpaAutoConfiguration.class})
 @ComponentScans(value = {
-        //@ComponentScan("boot.entry111"),
+        //@ComponentScan("boot.entry"),
         @ComponentScan("Model"),
         @ComponentScan("Controller"),
         @ComponentScan("DAO"),
